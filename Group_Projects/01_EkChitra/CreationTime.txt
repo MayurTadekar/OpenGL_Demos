@@ -1,0 +1,145 @@
+
+{
+	DIR : 01_Texture_Name
+	Date : Sunday - January 12, 2025 - 12:32:0:473 AM
+}
+
+{
+	FILE : CreationTime.txt
+	Date : Sunday - January 12, 2025 - 1:42:15:26 PM
+}
+
+{
+	DIR : 00_Integration
+	Date : Thursday - January 16, 2025 - 11:4:30:445 PM
+}
+
+{
+	DIR : Atharv_Tree
+	Date : Thursday - January 16, 2025 - 2:32:38:180 PM
+}
+
+{
+	FILE : Atharv_Tree.zip
+	Date : Thursday - January 16, 2025 - 2:31:25:888 PM
+}
+
+{
+	DIR : Hill_Gauri_version5
+	Date : Saturday - January 18, 2025 - 11:31:28:799 PM
+}
+
+{
+	DIR : NIVRUTTI_DAMDHAR_RIVER_V2
+	Date : Friday - January 17, 2025 - 11:58:39:47 PM
+}
+
+{
+	FILE : NIVRUTTI_DAMDHAR_RIVER_V2.zip
+	Date : Friday - January 17, 2025 - 11:58:9:756 PM
+}
+
+{
+	DIR : Omkar_DIVA
+	Date : Thursday - January 16, 2025 - 2:32:46:841 PM
+}
+
+{
+	FILE : Omkar_DIVA.zip
+	Date : Thursday - January 16, 2025 - 2:31:2:250 PM
+}
+
+{
+	DIR : Pankaj_Farm
+	Date : Friday - January 24, 2025 - 0:39:17:129 AM
+}
+
+{
+	FILE : Pankaj_Farm.zip
+	Date : Thursday - January 23, 2025 - 11:57:59:286 PM
+}
+
+{
+	DIR : Pati_Atharv
+	Date : Friday - January 24, 2025 - 1:18:38:450 AM
+}
+
+{
+	FILE : Pati_Atharv.zip
+	Date : Friday - January 24, 2025 - 1:18:24:216 AM
+}
+
+{
+	DIR : PRAJWAL_HOUSE
+	Date : Thursday - January 16, 2025 - 2:32:49:484 PM
+}
+
+{
+	FILE : PRAJWAL_HOUSE.zip
+	Date : Thursday - January 16, 2025 - 2:30:30:692 PM
+}
+
+{
+	DIR : Prasad_Boat
+	Date : Thursday - January 23, 2025 - 10:10:31:32 PM
+}
+
+{
+	FILE : Prasad_Boat.zip
+	Date : Thursday - January 23, 2025 - 10:9:6:73 PM
+}
+
+{
+	DIR : prashant_mankar_zopdi
+	Date : Friday - January 17, 2025 - 10:20:40:927 PM
+}
+
+{
+	FILE : prashant_mankar_zopdi.zip
+	Date : Friday - January 17, 2025 - 10:20:10:954 PM
+}
+
+{
+	DIR : project_secondVersion
+	Date : Friday - January 17, 2025 - 11:44:34:3 PM
+}
+
+{
+	FILE : project_secondVersion.zip
+	Date : Friday - January 17, 2025 - 11:44:20:317 PM
+}
+
+{
+	DIR : Sir_Visit_Proj_V2
+	Date : Friday - January 17, 2025 - 10:20:53:653 PM
+}
+
+{
+	FILE : Sir_Visit_Proj_V2.zip
+	Date : Friday - January 17, 2025 - 10:20:23:462 PM
+}
+
+{
+	FILE : tactor_gauri.zip
+	Date : Saturday - January 18, 2025 - 11:43:19:752 PM
+}
+
+{
+	DIR : tactor_gauri1.0
+	Date : Sunday - January 19, 2025 - 0:6:56:828 AM
+}
+
+{
+	FILE : tactor_gauri1.0.zip
+	Date : Sunday - January 19, 2025 - 0:5:58:765 AM
+}
+
+{
+	DIR : Tulas_Adesh
+	Date : Thursday - January 16, 2025 - 2:33:3:775 PM
+}
+
+{
+	FILE : Tulas_Adesh.zip
+	Date : Thursday - January 16, 2025 - 2:30:39:546 PM
+}

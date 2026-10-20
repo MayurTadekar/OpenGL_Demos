@@ -1,0 +1,30 @@
+
+{
+	FILE : code.c
+	Date : Monday - January 13, 2025 - 7:53:19:914 PM
+}
+
+{
+	FILE : code.exe
+	Date : Monday - January 13, 2025 - 7:53:45:687 PM
+}
+
+{
+	FILE : code.obj
+	Date : Monday - January 13, 2025 - 7:53:42:237 PM
+}
+
+{
+	FILE : output.png
+	Date : Monday - January 13, 2025 - 8:18:21:109 PM
+}
+
+{
+	FILE : CreationTime.txt
+	Date : Monday - January 13, 2025 - 8:39:5:943 PM
+}
+
+{
+	FILE : build.bat
+	Date : Sunday - January 19, 2025 - 0:20:5:223 AM
+}

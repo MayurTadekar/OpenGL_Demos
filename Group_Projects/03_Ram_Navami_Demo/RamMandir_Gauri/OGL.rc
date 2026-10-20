@@ -1,0 +1,4 @@
+#include "RamMandir.h"
+
+GRN_Icon ICON GRN.ico
+

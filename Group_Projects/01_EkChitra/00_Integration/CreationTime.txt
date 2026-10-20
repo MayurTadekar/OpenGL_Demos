@@ -1,0 +1,85 @@
+
+{
+	DIR : Adobe Premiere Pro Auto-Save
+	Date : Sunday - January 26, 2025 - 9:24:32:744 PM
+}
+
+{
+	FILE : Bird Chirping Sound Effect.mp4
+	Date : Sunday - January 26, 2025 - 9:39:0:939 PM
+}
+
+{
+	FILE : build.bat
+	Date : Friday - January 17, 2025 - 10:40:29:410 PM
+}
+
+{
+	FILE : Ek_Chitr.prproj
+	Date : Sunday - January 26, 2025 - 9:10:53:936 PM
+}
+
+{
+	FILE : Integration.c
+	Date : Thursday - January 16, 2025 - 11:56:38:355 PM
+}
+
+{
+	FILE : Integration.exe
+	Date : Friday - January 24, 2025 - 1:20:38:172 AM
+}
+
+{
+	FILE : Integration.obj
+	Date : Thursday - January 16, 2025 - 11:58:55:955 PM
+}
+
+{
+	FILE : Output.mp4
+	Date : Sunday - January 26, 2025 - 9:44:32:115 PM
+}
+
+{
+	FILE : Raga Bhupali Flute Classical Indian Flute Music Relaxation Meditation Raag Evening Raga.mp4
+	Date : Sunday - January 26, 2025 - 9:9:45:693 PM
+}
+
+{
+	FILE : song.wav
+	Date : Sunday - January 26, 2025 - 9:43:11:634 PM
+}
+
+{
+	DIR : Adobe Premiere Pro Auto-Save
+	Date : Sunday - January 26, 2025 - 9:24:32:744 PM
+}
+
+{
+	FILE : Bird Chirping Sound Effect.mp4
+	Date : Sunday - January 26, 2025 - 9:39:0:939 PM
+}
+
+{
+	FILE : CreationTime.txt
+	Date : Sunday - January 26, 2025 - 9:47:32:637 PM
+}
+
+{
+	FILE : Raga Bhupali Flute Classical Indian Flute Music Relaxation Meditation Raag Evening Raga.mp4
+	Date : Sunday - January 26, 2025 - 9:9:45:693 PM
+}
+
+{
+	DIR : Adobe Premiere Pro Auto-Save
+	Date : Sunday - January 26, 2025 - 9:24:32:744 PM
+}
+
+{
+	FILE : Bird Chirping Sound Effect.mp4
+	Date : Sunday - January 26, 2025 - 9:39:0:939 PM
+}
+
+{
+	FILE : Raga Bhupali Flute Classical Indian Flute Music Relaxation Meditation Raag Evening Raga.mp4
+	Date : Sunday - January 26, 2025 - 9:9:45:693 PM
+}
