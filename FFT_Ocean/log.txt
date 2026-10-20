@@ -1,0 +1,11 @@
+Log File Opened Successfully
+INFO: GLEW Version: 2.3.1
+INFO: OpenGL Renderer: NVIDIA GeForce RTX 4060/PCIe/SSE2
+INFO: OpenGL Version: 4.6.0 NVIDIA 617.42
+INFO: GLSL Version: 4.60 NVIDIA
+INFO: LoadTextureFromFile: Successfully loaded 2048x2048 texture from ./waternormal1.jpg
+INFO: ./waternormal1.jpg Loaded Successfully
+INFO: LoadTextureFromFile: Successfully loaded 256x256 texture from .\waternormal2.png
+INFO: .\waternormal2.png Loaded Successfully
+INFO: LoadTextureFromFile: Successfully loaded 2048x1536 texture from .\cubemap.png
+INFO: .\cubemap.png Loaded Successfully

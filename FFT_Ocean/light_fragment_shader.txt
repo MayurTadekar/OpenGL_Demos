@@ -1,0 +1,33 @@
+#version 450 core                             
+out vec4 Fragcolor;                           
+in vec3 transformed_normal;                                                                                               
+in vec3 light_direction;                                                                                                  
+in vec3 view_vector;                                                                                                      
+vec3 phong_ads_light;                                                                                                     
+uniform vec3  u_la;                                                                                                       
+uniform vec3  u_ld;                                                                                                       
+uniform vec3  u_ls;                                                                                                       
+uniform vec3  u_ka;                                                                                                       
+uniform vec3  u_kd;                                                                                                       
+uniform vec3  u_ks;                                                                                                       
+uniform float  u_kshiny;                                                                                                  
+uniform int  u_lKeyPressed;                                                                                               
+void main(void)                                                                                                           
+{                                                                                                                         
+	if( u_lKeyPressed == 1 )                                                                                                
+	{                                                                                                                      
+		vec3 normalized_transformed_normal = normalize(transformed_normal);                                                    
+		vec3 normalized_light_direction = normalize(light_direction);                                                          
+		vec3 normalized_view_vector = normalize(view_vector);                                                                  
+		vec3 reflection_vector = reflect( -normalized_light_direction, normalized_transformed_normal);                         
+		vec3 intensity_ambient = u_la * u_ka;                                                                                  
+		vec3 intensity_diffuse = u_ld * u_kd * max( dot(normalized_light_direction, normalized_transformed_normal), 0.0f);     
+		vec3 intensity_specular = u_ls * u_ks * pow( max( dot( reflection_vector, normalized_view_vector ), 0.0f), u_kshiny);  
+		phong_ads_light = intensity_ambient + intensity_diffuse + intensity_specular;                                  
+	} 
+	else 
+	{                                                                                                       
+		phong_ads_light = vec3(1.0f, 1.0f, 1.0f);                                                                  
+	}                                                                                                              
+	Fragcolor = vec4(phong_ads_light, 1.0f);   
+}
