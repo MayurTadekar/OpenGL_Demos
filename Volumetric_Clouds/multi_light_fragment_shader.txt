@@ -1,0 +1,73 @@
+#version 450 core
+out vec4 Fragcolor;
+in vec3 transformed_normal;
+in vec3 light_direction1;
+in vec3 light_direction2;
+in vec3 light_direction3;
+in vec3 view_vector;
+
+// Red light properties
+uniform vec3 u_la1;
+uniform vec3 u_ld1;
+uniform vec3 u_ls1;
+
+// Green light properties
+uniform vec3 u_la2;
+uniform vec3 u_ld2;
+uniform vec3 u_ls2;
+
+// Blue light properties
+uniform vec3 u_la3;
+uniform vec3 u_ld3;
+uniform vec3 u_ls3;
+
+// Material properties (same for all lights)
+uniform vec3 u_ka;
+uniform vec3 u_kd;
+uniform vec3 u_ks;
+uniform float u_kshiny;
+uniform int u_lKeyPressed;
+
+void main(void)
+{
+    vec3 phong_ads_light = vec3(0.0);
+    
+    if(u_lKeyPressed == 1)
+    {
+        vec3 normalized_transformed_normal = normalize(transformed_normal);
+        vec3 normalized_view_vector = normalize(view_vector);
+        
+        // Process Red Light
+        vec3 normalized_light_direction1 = normalize(light_direction1);
+        vec3 reflection_vector1 = reflect(-normalized_light_direction1, normalized_transformed_normal);
+        vec3 ambient1 = u_la1 * u_ka;
+        vec3 diffuse1 = u_ld1 * u_kd * max(dot(normalized_light_direction1, normalized_transformed_normal), 0.0);
+        vec3 specular1 = u_ls1 * u_ks * pow(max(dot(reflection_vector1, normalized_view_vector), 0.0), u_kshiny);
+        vec3 light1 = ambient1 + diffuse1 + specular1;
+        
+        // Process Green Light
+        vec3 normalized_light_direction2 = normalize(light_direction2);
+        vec3 reflection_vector2 = reflect(-normalized_light_direction2, normalized_transformed_normal);
+        vec3 ambient2 = u_la2 * u_ka;
+        vec3 diffuse2 = u_ld2 * u_kd * max(dot(normalized_light_direction2, normalized_transformed_normal), 0.0);
+        vec3 specular2 = u_ls2 * u_ks * pow(max(dot(reflection_vector2, normalized_view_vector), 0.0), u_kshiny);
+        vec3 light2 = ambient2 + diffuse2 + specular2;
+        
+        // Process Blue Light
+        vec3 normalized_light_direction3 = normalize(light_direction3);
+        vec3 reflection_vector3 = reflect(-normalized_light_direction3, normalized_transformed_normal);
+        vec3 ambient3 = u_la3 * u_ka;
+        vec3 diffuse3 = u_ld3 * u_kd * max(dot(normalized_light_direction3, normalized_transformed_normal), 0.0);
+        vec3 specular3 = u_ls3 * u_ks * pow(max(dot(reflection_vector3, normalized_view_vector), 0.0), u_kshiny);
+        vec3 light3 = ambient3 + diffuse3 + specular3;
+        
+        // Combine all light contributions
+        phong_ads_light = light1 + light2 + light3;
+    }
+    else
+    {
+        phong_ads_light = vec3(1.0);
+    }
+    
+    Fragcolor = vec4(phong_ads_light, 1.0);
+}

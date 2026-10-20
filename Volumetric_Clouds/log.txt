@@ -1,0 +1,15 @@
+Log File Opened Successfully
+INFO: GLEW Version: 2.1.0
+INFO: OpenGL Renderer: NVIDIA GeForce RTX 4060/PCIe/SSE2
+INFO: OpenGL Version: 4.6.0 NVIDIA 591.86
+INFO: GLSL Version: 4.60 NVIDIA
+INFO: Sphere data created successfully
+INFO: Sphere initialization complete with lighting shaders
+INFO: Number of Color Attachments: 1
+INFO: FrameBufferObject initialized
+INFO: FrameBufferObject uninitialized
+INFO: FrameBufferObject initialized
+INFO: FrameBufferObject uninitialized
+INFO: FrameBufferObject initialized
+INFO: FrameBufferObject uninitialized
+INFO: FrameBufferObject initialized
