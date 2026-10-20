@@ -1,0 +1,189 @@
+/**************************************************
+ * S.G.M.P
+ * @file: camera.hpp
+ * @brief: Implementation of and interactive camera in CPP for OpenGL
+ * @author: MarshallingVoid(marshallingvoid@gmail.com)
+ * @Copyright ©2020-2025 MarshallingVoid
+ * @date: 06 January 2026 (Tuesday) 06:01:21 PM
+ **************************************************/
+
+#ifndef CAMERA_HPP
+#define CAMERA_HPP
+
+#include <GL/glew.h>
+#include <GL/GL.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <Windows.h>
+#include <cmath>
+
+#include <fstream>
+
+class Camera
+{
+private:
+    glm::vec3 camera_position;
+    glm::vec3 camera_front;
+    glm::vec3 camera_up;
+    glm::vec3 camera_right;
+    glm::vec3 world_up;
+    glm::vec3 init_camera_position;
+    glm::vec3 init_world_up;
+
+    bool isCameraEnabled;
+
+    bool isMoveForward;
+    bool isMoveBackward;
+    bool isMoveLeft;
+    bool isMoveRight;
+    bool isMoveUp;
+    bool isMoveDown;
+    bool isMouseLeftButtonDown;
+    bool isMouseMiddleButtonDown;
+    bool isMouseRightButtonDown;
+    bool isPitchUp;
+    bool isPitchDown;
+    bool isYawLeft;
+    bool isYawRight;
+    int lastX;
+    int lastY;
+
+    float yaw;
+    float pitch;
+    float mouseSensitivity;
+    float movementSpeed;
+
+    Camera() = delete;
+
+    void UpdateCameraVectors();
+
+    void MoveForward(float delta);
+    void MoveBackward(float delta);
+    void MoveLeft(float delta);
+    void MoveRight(float delta);
+    void MoveUpward(float delta);
+    void MoveDownward(float delta);
+
+    void HandleMouseMove(int x, int y);
+
+    void HandleWindowKeyUp(WPARAM wParam, LPARAM lParam);
+    void HandleWindowKeyDown(WPARAM wParam, LPARAM lParam);
+    void HandleWindowChar(WPARAM wParam, LPARAM lParam);
+
+    void ResetCamera();
+
+public:
+    Camera(glm::vec3 pos, glm::vec3 up) : camera_position(pos),
+                                          init_camera_position(pos),
+                                          world_up(up),
+                                          init_world_up(up),
+                                          isMouseLeftButtonDown(false),
+                                          isMouseMiddleButtonDown(false),
+                                          isMouseRightButtonDown(false),
+                                          lastX(0),
+                                          lastY(0),
+                                          yaw(-90.0f),
+                                          pitch(0.0f),
+                                          mouseSensitivity(0.1f),
+                                          movementSpeed(0.1f),
+                                          isCameraEnabled(false)
+    {
+        camera_front = glm::vec3(0.0f, 0.0f, 1.0f);
+        if (!CheckAndReadCameraData())
+        {
+            UpdateCameraVectors();
+        }
+    }
+
+    // Constructor with all parameters for flexibility
+    Camera(glm::vec3 pos,
+           glm::vec3 front,
+           glm::vec3 up,
+           glm::vec3 right,
+           glm::vec3 worldUp,
+           glm::vec3 initPos,
+           glm::vec3 initWorldUp,
+           float yawAngle,
+           float pitchAngle,
+           float sensitivity,
+           float speed) : camera_position(pos),
+                          init_camera_position(initPos),
+                          world_up(worldUp),
+                          init_world_up(initWorldUp),
+                          isMouseLeftButtonDown(false),
+                          isMouseMiddleButtonDown(false),
+                          isMouseRightButtonDown(false),
+                          lastX(0),
+                          lastY(0),
+                          yaw(yawAngle),
+                          pitch(pitchAngle),
+                          mouseSensitivity(sensitivity),
+                          movementSpeed(speed),
+                          camera_front(front),
+                          camera_right(right),
+                          isCameraEnabled(false)
+    {
+        if (!CheckAndReadCameraData())
+        {
+            UpdateCameraVectors();
+        }
+    }
+
+    bool CheckAndReadCameraData()
+    {
+        std::ifstream file("camera_data_restore.txt");
+
+        if (file.is_open())
+        {
+            file.close();
+            ReadCameraDataForRestoring();
+
+            camera_front = glm::normalize(camera_front);
+            camera_right = glm::normalize(glm::cross(camera_front, world_up));
+            camera_up = glm::normalize(glm::cross(camera_right, camera_front));
+            return (true);
+        }
+        return (false);
+    }
+
+    void SetYaw(const float _yaw)
+    {
+        yaw = _yaw;
+        UpdateCameraVectors();
+    }
+
+    void SetPitch(const float _pitch)
+    {
+        pitch = _pitch;
+        UpdateCameraVectors();
+    }
+
+    void SetMovementSpeed(const float speed)
+    {
+        movementSpeed = speed;
+    }
+
+    void SetMouseSensitivity(const float sensitivity)
+    {
+        mouseSensitivity = sensitivity;
+    }
+
+    void HandleKeyboardMessages(UINT iMsg, WPARAM wParam, LPARAM lParam);
+    void HandleMouseMessages(UINT iMsg, WPARAM wParam, LPARAM lParam);
+
+    void Update();
+
+    glm::mat4 GetViewMatrix() const;
+
+    glm::vec3 GetCameraPosition() const { return (camera_position); }
+
+    // Save camera data to file
+    void SaveCameraData(const char *filename = "camera_data.txt") const;
+    void SaveCameraDataForRestoring() const;
+
+    void ReadCameraDataForRestoring();
+
+    void DisplayImGUI();
+};
+
+#endif // CAMERA_HPP

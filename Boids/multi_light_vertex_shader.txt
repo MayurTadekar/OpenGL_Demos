@@ -1,0 +1,40 @@
+#version 450 core
+in vec4 vPosition;
+in vec3 vNormal;
+uniform glm::mat4 u_modelMatrix;
+uniform glm::mat4 u_viewMatrix;
+uniform glm::mat4 u_ProjectionMatrix;
+uniform int  u_lKeyPressed;
+
+// Multiple light positions
+uniform vec4 u_LightPosition1;  // Red light
+uniform vec4 u_LightPosition2;  // Green light 
+uniform vec4 u_LightPosition3;  // Blue light
+
+out vec3 transformed_normal;
+out vec3 light_direction1;      // Direction to red light
+out vec3 light_direction2;      // Direction to green light
+out vec3 light_direction3;      // Direction to blue light
+out vec3 view_vector;
+
+void main(void)
+{
+    if(u_lKeyPressed == 1)
+    {
+        vec4 eye_coord = u_viewMatrix * u_modelMatrix * vPosition;
+        transformed_normal = mat3(u_viewMatrix * u_modelMatrix) * vNormal;
+        
+        // Calculate direction to each light
+        vec4 light_pos_eye1 = u_viewMatrix * u_LightPosition1;
+        light_direction1 = light_pos_eye1.xyz - eye_coord.xyz;
+        
+        vec4 light_pos_eye2 = u_viewMatrix * u_LightPosition2;
+        light_direction2 = light_pos_eye2.xyz - eye_coord.xyz;
+        
+        vec4 light_pos_eye3 = u_viewMatrix * u_LightPosition3;
+        light_direction3 = light_pos_eye3.xyz - eye_coord.xyz;
+        
+        view_vector = -eye_coord.xyz;
+    }
+    gl_Position = u_ProjectionMatrix * u_viewMatrix * u_modelMatrix * vPosition;
+}

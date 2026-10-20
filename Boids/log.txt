@@ -1,0 +1,66 @@
+Log File Opened Successfully
+INFO: GLEW Version: 2.3.1
+INFO: OpenGL Renderer: NVIDIA GeForce RTX 4060/PCIe/SSE2
+INFO: OpenGL Version: 4.6.0 NVIDIA 617.42
+INFO: GLSL Version: 4.60 NVIDIA
+INFO: Reading Shader File: .\flock_cs.glsl
+INFO: Shader Compilation Successful: .\flock_cs.glsl
+INFO: Setting Directions : 500
+INFO: GLTF Model Initialized
+INFO: GLTF Model Object Created Successfully
+INFO: Loading GLTF Model
+INFO: Loading GLTF Model from path: ./scene.gltf
+INFO: Processing node Sketchfab_model
+INFO: Processing node Object_0
+INFO: Processing mesh Object_0
+INFO: Number of vertices: 214
+INFO: Mesh has normals
+INFO: Mesh has tangents and bitangents
+INFO: Loading material textures of type: texture_diffuse(1)
+INFO: Loading texture: textures/caudainitialShadingGroup_baseColor.png
+INFO: Loaded texture at path: ./textures/caudainitialShadingGroup_baseColor.png
+INFO: Loading material textures of type: texture_specular(0)
+INFO: Loading material textures of type: texture_normal(0)
+INFO: Processing node Object_1
+INFO: Processing mesh Object_1
+INFO: Number of vertices: 934
+INFO: Mesh has normals
+INFO: Mesh has tangents and bitangents
+INFO: Loading material textures of type: texture_diffuse(1)
+INFO: Loading texture: textures/fishinitialShadingGroup_baseColor.png
+INFO: Loaded texture at path: ./textures/fishinitialShadingGroup_baseColor.png
+INFO: Loading material textures of type: texture_specular(0)
+INFO: Loading material textures of type: texture_normal(0)
+INFO: Processing node Object_2
+INFO: Processing mesh Object_2
+INFO: Number of vertices: 104
+INFO: Mesh has normals
+INFO: Mesh has tangents and bitangents
+INFO: Loading material textures of type: texture_diffuse(1)
+INFO: Loading texture: textures/caudainitialShadingGroup_baseColor.png
+INFO: Loading material textures of type: texture_specular(0)
+INFO: Loading material textures of type: texture_normal(0)
+INFO: GLTF Model Loaded Successfully
+INFO: Vertex shader created successfully
+INFO: Sphere initialization complete with lighting shaders
+INFO: Vertex shader created successfully
+INFO: Sphere initialization complete with lighting shaders
+INFO: Reading Shader File: flockprogram_vs.glsl
+INFO: Shader Compilation Successful: flockprogram_vs.glsl
+INFO: Reading Shader File: flockprogram_fs.glsl
+INFO: Shader Compilation Successful: flockprogram_fs.glsl
+INFO: Reading Shader File: line_vs.glsl
+INFO: Shader Compilation Successful: line_vs.glsl
+INFO: Reading Shader File: line_fs.glsl
+INFO: Shader Compilation Successful: line_fs.glsl
+INFO: Reading Shader File: normal_vs.glsl
+INFO: Shader Compilation Successful: normal_vs.glsl
+INFO: Reading Shader File: normal_fs.glsl
+INFO: Shader Compilation Successful: normal_fs.glsl
+INFO: Reading Shader File: modelrender_vs.glsl
+INFO: Shader Compilation Successful: modelrender_vs.glsl
+INFO: Vertex Shader Created
+INFO: Reading Shader File: modelrender_fs.glsl
+INFO: Shader Compilation Successful: modelrender_fs.glsl
+INFO: Fragment Shader Created
+INFO: ModelRenderingProgram Initialized
